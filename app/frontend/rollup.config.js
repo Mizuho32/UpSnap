@@ -51,7 +51,7 @@ export default {
 			preprocess: preprocess(),
 		}),
 		replace({
-			BACKEND_PORT: JSON.stringify(process.env.BACKEND_PORT),
+			WS_PROXY_PORT: JSON.stringify(process.env.WS_PROXY_PORT || process.env.BACKEND_PORT),
 			preventAssignment: true
 		}),
 		// we'll extract any component CSS out into

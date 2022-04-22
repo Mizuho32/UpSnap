@@ -3,7 +3,7 @@ import {
 } from 'svelte/store';
 
 const messageStore = writable('');
-const socket = new WebSocket(`ws://${location.hostname}:${BACKEND_PORT}/wol/`);
+const socket = new WebSocket(`ws://${location.hostname}:${WS_PROXY_PORT}/wol/`);
 
 // Connection opened
 socket.addEventListener('open', function (event) {
